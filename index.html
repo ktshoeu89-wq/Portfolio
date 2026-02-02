@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Kamohelo Tshoeu | Web Developer</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <span>MENU</span>
+                <i class="fas fa-bars" onclick="showMenu()"></i >
+            </div>
+            
+            <div class="links" id="Links">
+                <i class="fas fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#projects">PROJECTS</a></li>
+                    <li><a href="index.html#skills">SKILLS</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                    <li><a href="">CV</a></li>
+                </ul>
+            </div>
+        </nav>
+            <div class="name-txt-box">
+                <div class="mobile-header-img">
+                    <img src="images/HI I’m (4) (1).png" alt="">
+                </div>
+                <div class="autoshow">
+                    <span class="greeting">Hi I'm</span>
+                    <span class="name">KAMO</span>
+                </div>
+            </div>
+
+            <div class="txt-box-heading">
+                <h1 class="heading-1">I build practical <span id="AutoTyped" class="auto-typed"></span></h1>
+                <h2 class="heading-2">& keep learning how to do it better ...</h2>
+            </div>
+
+            <div class="stack">
+                <span><span class="glowing-stack">Junior Web Developer</span> | HTML5, CSS3, JavaScript</span>
+            </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about-container"  >
+            <div class="autoshow-scroll">
+                <div class="col">
+                    <div class="img-container">
+                        <img src="images/about-image.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h1>About</h1>
+                    <p>I’m early in my development career, but serious about building things the right way. I focus on building clean, functional interfaces and learning how things work under the hood, not just how to make them look good. <br><br>
+
+                        I’ve worked with HTML, CSS, and JavaScript to build real projects, including websites for a guest house and a high school. I’m currently expanding my skills in backend development and improving how I structure, scale, and maintain code. <br><br>
+
+                        What I care about most is understanding problems properly and building solutions that make sense for real users. I’m still learning, but I take that seriously. I write code, break it, fix it, and come out better each time. <br><br>
+
+                        When I’m not coding, I spend time studying new tools, improving past projects, and figuring out how to become a more effective developer overall.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="projects-txt-box">
+            <div class="projects-txt">
+                <h1>Projects</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odit tempore amet quia facere suscipit rem quasi dolorem saepe explicabo laudantium quos quaerat doloribus, fuga quod dolor quas! Dolorem, voluptas.</p>
+            </div>
+        </div>
+
+        <div class="projects-container autoshow-scroll">
+
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h1>My Skills</h1>
+
+        <div class="skills-container">
+            <span> HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Git</span>
+            <span>Github</span>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-phone"></i>+27 69 945 4308</a>
+        </div>
+        <p>© 2026 KamoheloTshoeu.</p>
+    </footer>
+    <script>
+        var navLinks = document.querySelector('.links');
+        function  showMenu(){
+            navLinks.style.left = '0';
+        }
+
+        function hideMenu(){
+            navLinks.style.left = '-100%';
+        }
+    </script>
+
+    <script>
+        const projectsConfig = {
+            projects: [
+                {
+                id: 'kings-school',
+                src: 'images/triple-room.jpg',
+                title: 'High School website',
+                description: 'Developed for Kings Christian School Ficksburg',
+                techStacks: ['HTML', 'CSS', 'JavaScript'],
+                url: 'project-overview.html?id=kings-school'
+                },
+                {
+                id: 'molimo-lodge',
+                src: 'images/triple-room.jpg',
+                title: 'Guest Lodge website',
+                description: 'Developed for Molimo Nthuse Lodge',
+                techStacks: ['HTML', 'CSS', 'JavaScript'],
+                url: 'project-overview.html?id=molimo-lodge'
+                },
+                {
+                id: 'bella-rosa',
+                src: 'images/triple-room.jpg',
+                title: 'Guest house website',
+                description: 'Developed for Bella Rosa Guest House',
+                techStacks: ['HTML', 'CSS', 'JavaScript'],
+                url: 'project-overview.html?id=bella-rosa'
+                }
+            ]
+        };
+
+
+        document.addEventListener('DOMContentLoaded', ()=> {
+            const projectsContainer = document.querySelector('.projects-container.autoshow-scroll')
+
+            projectsConfig.projects.forEach(project => {
+                const projectDiv = document.createElement('div')
+                projectDiv.className = 'project'
+
+                const img = document.createElement('img')
+                img.src = project.src;
+                img.alt = project.title;
+
+                const layerDiv = document.createElement('div')
+                layerDiv.className = 'project-layer';
+
+                const h2 = document.createElement('h2')
+                    h2.textContent = `${project.title}\n${project.description}`;
+
+                const stackDiv = document.createElement('div')
+                stackDiv.className = 'projects-stack';
+
+                project.techStacks.forEach(stack =>{
+                    const span = document.createElement('span')
+                    span.textContent = stack;
+                    stackDiv.appendChild(span)
+                })
+
+                const link = document.createElement('a');
+                link.href = project.url;
+                link.className = 'project-link';
+
+                layerDiv.appendChild(h2);
+                projectDiv.appendChild(img)
+                projectDiv.appendChild(layerDiv)
+                projectDiv.appendChild(stackDiv)
+                link.appendChild(projectDiv);
+                projectsContainer.appendChild(link);
+            });
+        })
+    </script>
+
+
+
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#AutoTyped', {
+            strings: ['Websites', 'Web Apps', 'Interfaces', 'Solutions'],
+            typeSpeed: 150,
+            loop: true
+            });
+    </script>
+</body>
+</body>
+</html>

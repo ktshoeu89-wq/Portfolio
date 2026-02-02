@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Kamohelo Tshoeu | Web Developer</title>
+</head>
+<body>
+    <header class="overview-header">
+        <nav>
+            <div class="menu">
+                <span>MENU</span>
+                <i class="fas fa-bars" onclick="showMenu()"></i >
+            </div>              
+            <div class="links" id="Links">
+                <i class="fas fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#projects">PROJECTS</a></li>
+                    <li><a href="index.html#skills">SKILLS</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                    <li><a href="">CV</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="overview-container">
+                <div class="txt-container">
+                    <h1></h1>
+                    <h2></h2>
+                    <p><span>My role :</span></p>
+                    <div class="overview-links flexed">
+                        <a href="">Live Demo</a>
+                        <a href="">Github Repo</a>
+                    </div>
+                </div>
+                <div class="stack-container">
+                    <div class="tech-stack">
+                        <h2>Tech Stack</h2>
+                        <ul>
+                            <li>HTML5 – semantic structure</li>
+                            <li>CSS3 – layout, responsiveness, and animations</li>
+                            <li>JavaScript – interactivity and UI behavior</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <section class="project-section">
+        <div class="video-container">
+            <video 
+                src="images/stock-footage-drone-shot-university-of-chicago-campus-historic-buildings-and-halls-on-sunny-day-illinois-usa.webm"
+                autoplay
+                muted
+                loop
+                playsinline
+            ></video>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <h1>Project Overview</h1>
+        <p id="project-overview"></p>
+    </section>
+
+    <section class="project-section">
+        <h1>Problem Statement</h1>
+        <p id="project-problem"></p>
+    </section>
+
+    <section class="project-section">
+        <h1>Solution</h1>
+        <p id="project-solution"></p>
+    </section>
+
+    <section class="project-section">
+        <h1>Features & Functionality</h1>
+        <ul id="project-features"></ul>
+    </section>
+
+    <section class="project-section">
+        <h1>Result</h1>
+        <p id="project-result"></p>
+    </section>
+
+    <section class="project-section">
+        <div class="screenshots-container">
+            <h2>Screenshots</h2>
+            <div class="screenshots flexed"></div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-phone"></i> +27 69 945 4308</a>
+        </div>
+        <p>© 2026 KamoheloTshoeu.</p>
+    </footer>
+    <script>
+        var navLinks = document.querySelector('.links');
+        function  showMenu(){
+            navLinks.style.left = '0';
+        }
+
+        function hideMenu(){
+            navLinks.style.left = '-100%';
+        }
+    </script>
+
+    <script src="projects-data.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            zoomable: true,
+            openEffect: 'zoom',
+            closebutton: true
+        });
+    </script>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('id');
+
+    const project = projectsData?.[projectId]; 
+
+    if (!project) {
+        document.body.innerHTML = "<h1>Project not found</h1>";
+    } else {
+        document.querySelector('.txt-container h1').textContent = project.title;
+        document.querySelector('.txt-container h2').textContent = project.subtitle;
+        document.querySelector('.txt-container p').innerHTML = `<span>My role :</span> ${project.role}`;
+
+        document.getElementById('project-overview').textContent = project.overview;
+        document.getElementById('project-problem').textContent = project.problem;
+        document.getElementById('project-solution').textContent = project.solution;
+        document.getElementById('project-result').textContent = project.result;
+
+        const featuresList = document.getElementById('project-features');
+        featuresList.innerHTML = '';
+        project.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.textContent = feature;
+        featuresList.appendChild(li);
+        });
+
+
+
+        const techList = document.querySelector('.tech-stack ul');
+        techList.innerHTML = '';
+        project.tech.forEach(t => {
+            const li = document.createElement('li');
+            li.textContent = t;
+            techList.appendChild(li);
+        });
+
+        document.querySelector('.overview-links a:nth-child(1)').href = project.live;
+        document.querySelector('.overview-links a:nth-child(2)').href = project.github;
+
+
+        const screenshotsContainer = document.querySelector('.screenshots');
+        if (screenshotsContainer) {
+            screenshotsContainer.innerHTML = '';
+            project.screenshots.forEach(img => {
+                screenshotsContainer.innerHTML += `
+                    <div class="screenshot">
+                        <a href="${img}" class="glightbox" data-gallery="mygallery">
+                            <img src="${img}" alt="Screenshot">
+                        </a>
+                    </div>
+                `;
+            });
+        }
+    }
+</script>
+
+</body>
+</html>
