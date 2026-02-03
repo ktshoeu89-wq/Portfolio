@@ -26,7 +26,7 @@
                     <li><a href="index.html#projects">PROJECTS</a></li>
                     <li><a href="index.html#skills">SKILLS</a></li>
                     <li><a href="index.html#contact">CONTACT</a></li>
-                    <li><a href="">CV</a></li>
+                    <li><a class="cv" href="Documents/Kamohelo-Tshoeu-CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
                 </ul>
             </div>
         </nav>
@@ -56,7 +56,7 @@
     <section class="project-section">
         <div class="video-container">
             <video 
-                src="images/stock-footage-drone-shot-university-of-chicago-campus-historic-buildings-and-halls-on-sunny-day-illinois-usa.webm"
+            id="project-video"
                 autoplay
                 muted
                 loop
@@ -143,6 +143,11 @@
         document.querySelector('.txt-container h1').textContent = project.title;
         document.querySelector('.txt-container h2').textContent = project.subtitle;
         document.querySelector('.txt-container p').innerHTML = `<span>My role :</span> ${project.role}`;
+        const video = document.getElementById('project-video');
+            if (project.video) {
+                video.src = project.video;
+                video.load();
+            }
 
         document.getElementById('project-overview').textContent = project.overview;
         document.getElementById('project-problem').textContent = project.problem;
@@ -183,6 +188,9 @@
                     </div>
                 `;
             });
+            
+            lightbox.reload();
+
         }
     }
 </script>
