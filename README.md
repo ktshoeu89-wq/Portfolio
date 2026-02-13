@@ -48,11 +48,14 @@ It highlights responsive design, clean code structure, interactive elements, and
 - Clean folder structure
 
 ---
- ### Screenshots
-<div align="center">
-  <img src="screenshots/desktop.png" alt="Desktop View" width="70%">
-  <br><br>
-  <img src="screenshots/mobile.png" alt="Mobile View" width="40%">
+### Screenshots
+
+<div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+  <img width="45%" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/9f69dbd9-5e06-4c26-a0e2-3d6a9dab0f8e" />
+  <img width="45%" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/ca2a4b58-7bf9-48ce-823f-b75f1dc79c75" />
+  <img width="45%" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/110ed027-8052-40c2-b442-0511604d02e2" />
+  <img width="45%" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/249187b4-1de0-46ce-b8f2-af1cc9538b5a" />
+  <img width="45%" alt="Screenshot (5)" src="https://github.com/user-attachments/assets/57c94a1e-8c5b-4101-9368-32c433d7769f" />
 </div>
 
 ### 🚀 Live Demo & Repository
