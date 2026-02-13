@@ -565,6 +565,7 @@ footer {
     padding: 100px 0;
     width: 100%;
 }
+
 .screenshots-container h2{
     padding-bottom: 20px;
     text-align: center;
@@ -647,6 +648,7 @@ footer {
     }
 
     .menu{
+                position: fixed;
         display: flex;
         gap: 5px;
         padding: 7px  10px;
