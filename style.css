@@ -59,7 +59,6 @@ header{
 }
 
 .cv:hover{
-    
     border: 2px solid #91c6ff;
 }
 
@@ -173,8 +172,6 @@ header{
     }
 }
 
-
-
 .about-container{
     padding: 180px 20px 30px 20px;
     position: relative;
@@ -272,15 +269,12 @@ header{
     background-color: rgb(6 30 59);
 }
 
-
-
 .project img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0.7;
 }
-
 
 .project-layer {
     position: absolute;
@@ -320,7 +314,6 @@ header{
     color: inherit;
     display: block;
 }
-
 
 .projects-stack span{
     color: white;
@@ -596,6 +589,136 @@ footer {
     display: none;
 }
 
+.sub-header{
+    height: 70vh;
+}
+
+.sub-txt-box{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+
+.sub-txt-box h1{
+    font-size: 100px;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    gap: 70px;
+}
+
+.contact-container-col{
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.contact-container-col h2{
+    font-size: 30px;
+}
+
+.form-group{
+    padding: 22px 0;
+}
+
+.form-group input, .form-group textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #304a69;
+    width: 70%;
+    padding-bottom: 10px;
+    outline: none;
+    transition: .9s;
+    color: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-bottom: 1px solid #91c6ff;
+}
+
+.form-group ::placeholder{
+    color: rgb(189, 187, 187);
+}
+
+.contact button{
+    padding: 17px 30px;
+    background-color: transparent;
+    border: solid 1px #194a7e;
+    border-radius: 25px;
+    color: white;
+    transition: 0.5s;
+}
+
+.contact button:hover{
+    border: 2px solid #0a6de6;
+}
+
+.info-container{
+    display: flex;
+
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details{
+    padding: 20px;
+    background-color: #0b1020;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.info-group{
+    padding: 20px;
+    background-color: rgb(7, 29, 55);
+}
+
+.info-links{
+    padding: 20px;
+    background-color: #0b1020;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-links i{
+    font-size: 40px;
+    color: white;
+}
+
+.info-links i:hover{
+    color: #4dabf7;
+}
+
+.contact-container-col h3{
+    color: white;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.contact-container-col h4{
+    color: white;
+    font-size: 14px;
+}
+
+.contact-container-col .line::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.9px;
+    background-color: white;
+    top: -3px;
+}
 @media (max-width: 800px) {
     .flexed{
         flex-direction: column;
@@ -785,7 +908,26 @@ footer {
     .screenshots{
         gap: 20px;
     }
-}
+
+    .sub-txt-box h1{
+        font-size: 400%;
+    }
+
+    .details{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .info-group{
+        padding: 20px;
+        background-color: rgb(7, 29, 55);
+    }
+
+    .info-links{
+        padding: 20px;
+        width: 100%;
+    }
+    }
 
 @media (max-width: 500px) {
     .video-container video{

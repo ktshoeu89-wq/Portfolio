@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact | Web Developer</title>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="menu">
+                <span>MENU</span>
+                <i class="fas fa-bars" onclick="showMenu()"></i >
+            </div>
+            
+            <div class="links" id="Links">
+                <i class="fas fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#projects">PROJECTS</a></li>
+                    <li><a href="index.html#skills">SKILLS</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                    <li><a class="cv" href="Documents/Kamohelo-Tshoeu-CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="sub-txt-box">
+            <h1>Contact</h1>
+        </div>
+    </section>
+
+    <section class="contact flexed">
+        <div class="contact-container-col">
+            <h2>Say hello...</h2>
+            <p>Got an idea, a project, or an opportunity? Let’s talk. I’m always open to collaborating and building something meaningful.</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="801f2b9b-9705-46fe-9353-086e21c0fc51">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name:" required> 
+                </div>
+                <div class="form-group">
+                    <input type="text" id="number" name="number" placeholder="Phone Number:" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="email" name="email" placeholder="Email:" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" placeholder="Message:" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contact-container-col">
+            <h3 class="line">Get in touch</h3> 
+            <div class="info-container">
+                <div class="info-col">
+                    <div class="details">
+                        <div class="info-group number">
+                            <h4>Phone Number:</h4>
+                            <p>+27 69 945 4308</p>
+                        </div>
+                        <div class="info-group email">
+                            <h4>Email Address:</h4>
+                            <p>ktshoeu89@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-col">
+                    <h3>Links</h3>
+                    <div class="info-links">
+                        <a href="https://www.linkedin.com/in/kamo-tshoeu1/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ktshoeu89-wq"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/ktshoeu89-wq"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/kamo-tshoeu1/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:ktshoeu89@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+27 69 945 4308"><i class="fas fa-phone"></i>+27 69 945 4308</a>
+        </div>
+        <p>© 2026 KamoheloTshoeu.</p>
+    </footer>
+    <script>
+
+        var navLinks = document.querySelector('.links');
+        function  showMenu(){
+            navLinks.style.left = '0';
+        }
+
+        function hideMenu(){
+            navLinks.style.left = '-100%';
+        }
+
+        document.querySelectorAll('.links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 800) {
+                    hideMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</body>
+</html>
