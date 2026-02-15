@@ -46,6 +46,7 @@ It highlights responsive design, clean code structure, interactive elements, and
 - Smooth scroll navigation & section animations
 - Interactive project cards with hover effects
 - Clean folder structure
+- Functional contact form powered by Web3Forms (serverless form handling with email delivery)
 
 ---
 ### Screenshots
