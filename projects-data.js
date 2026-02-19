@@ -9,8 +9,8 @@ const projectsData = {
         "JavaScript - ES6+, DOM APIs, Form Validation & Interactivity"
         ],
 
-        live: "#",
-        github: "#",
+        live: "https://molimo-nthuse-2.onrender.com",
+        github: "https://github.com/ktshoeu89-wq/Molimo-Nthuse",
         video: "videos/molimo nthuse video/Molimo Nthuse - Google Chrome 2026-02-03 22-46-00.mp4",
 
         overview: "Molimo Nthuse Lodge is a historic mountain lodge (established 1975) located at the stunning Molimo Nthuse Pass in Lesotho, offering visitors a peaceful escape with panoramic highland views, outdoor adventures, and cozy accommodation. The new website serves as the lodge's primary online presence, helping attract local and international tourists by showcasing its unique location and services.",
