@@ -36,5 +36,38 @@ const projectsData = {
             "images/screenshots/molimo nthuse screenshots/molimo nthuse (11).png",
             "images/screenshots/molimo nthuse screenshots/molimo nthuse (12).png"
         ]
+    },
+    "kings-high": {
+        title: "High School Website",
+        subtitle: "Developed for Kings Christian School",
+        role: "Frontend Developer & Designer",
+        tech: [
+        "HTML5 – semantic, accessible structure",
+        "CSS3 – responsive layout and styling",
+        "JavaScript – interactivity and UI behavior"
+        ],
+
+        live: "https://www.kingsficksburg.co.za/",
+        github: "https://github.com/ktshoeu89-wq/Kings-High-School",
+        video: "videos/kings video/King's School Ficksburg - Google Chrome 2026-02-03 20-25-20.mp4",
+
+        overview: "This project involved designing and developing a modern, responsive website for Kings Christian School. The goal was to create a clear and professional online presence that communicates the school’s values, academic offerings, and key information to parents, students, and staff. The site focuses on usability, performance, and a clean visual hierarchy.",
+        problem: "The school lacked a centralized, modern website that clearly presented essential information such as academics, admissions, announcements, and contact details. Existing communication channels were fragmented, making it difficult for parents and prospective students to find up-to-date and relevant information.",
+        solution: "I designed and built a fully responsive website with a structured layout and intuitive navigation. The site organizes information into clear sections, ensures accessibility across devices, and provides a consistent visual identity aligned with the school’s branding. Interactive elements were added to improve user engagement while keeping the experience simple and fast.",
+        features: [
+        "Responsive layout optimized for mobile, tablet, and desktop",
+        "Clear navigation structure for parents, students, and staff",
+        "Dedicated sections for academics, announcements, and school information"
+        ],
+        result: "The website is now live and provides the school with a professional online presence. It has improved accessibility to information, streamlined communication, and is actively being used by visitors to explore the school and make enquiries." ,       
+        screenshots: [
+            "images/screenshots/kings screenshots/kings screenshot (1).png",
+            "images/screenshots/kings screenshots/kings screenshot (2).png",
+            "images/screenshots/kings screenshots/kings screenshot (3).png",
+            "images/screenshots/kings screenshots/kings screenshot (4).png",
+            "images/screenshots/kings screenshots/kings screenshot (5).png",
+            "images/screenshots/kings screenshots/kings screenshot (6).png",
+            "images/screenshots/kings screenshots/kings screenshot (7).png",
+        ]
     }
 };
